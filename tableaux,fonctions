@@ -1,0 +1,51 @@
+\\ un algorithme que calcule le min et le max de n valeur entrantes par l'utilisateur, utilisant les tableaux et les fonction.
+
+ALGORITHME             min-max
+
+
+FONCTION min (minimum:entier , a: entier): entier 
+variables
+    result:entier
+debut 
+    si (a<minimum)alors 
+        result=a
+    sinon 
+       result=minimum
+    finsi
+    retourne result
+fin
+
+ 
+FONCTION   max(maximum: entier, a: entier):entier
+variables
+    resul:entier
+debut
+    si (a>maximum)alors
+        result=a
+    sinon 
+        result=maximum
+    finsi 
+    retourne result
+fin 
+
+
+VARIABLES
+    tableau T[n]:entier 
+DEBUT
+   ecrire "donne la taille du tableau"
+   lire n
+    pour i allant de 1 a n faire
+        ecrire "entrez T[",i,"]:"
+        lire T[i]
+    finpour
+
+    minimum = T[1]
+    maximum = T[1]
+    
+    pour i allant de 1 a n faire
+        minimum = min(minimum , T[i])
+        maximum = max(maximum , T[i])
+    finpour
+    ecrire ("le minimume est:", minimum)
+    ecrire ("le maximum est :", maximum)       
+FIN
